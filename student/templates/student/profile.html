@@ -1,0 +1,18 @@
+{% extends "student/base.html" %}
+{% block title %}
+Profile
+{% endblock title %}
+{% block content %}
+<h2>Student Profile</h2>
+<p><strong>Name:</strong{{student.name}}></p>
+<p><strong>Matric No:</strong{{student.matric}}></p>
+<p><strong>Department:</strong{{student.department}}></p>
+<p><strong>Level:</strong{{student.level}}></p>
+
+    {% if student.status == 'Active' %}
+    <p style="color:green">Status: Active ✅</p>
+    {% else %}
+    <p style="color:red">Status: Inactive ❌</p>
+
+    {% endif %}
+{% endblock content %}

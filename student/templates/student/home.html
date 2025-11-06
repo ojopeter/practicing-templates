@@ -1,0 +1,16 @@
+{% extends "student/base.html" %}
+{% block title %}Dashboard{% endblock title %}
+{% block content %}
+<h1>Welcome to Your Dashboard</h1>
+<h3>Your statistics</h3>
+<ul>
+    <li>Total Courses: {{stats.courses}}</li>
+    <li>Completed: {{stats.competed}}</li>
+    <li>CGPA: {{stats.cgpa}}</li>
+</ul>
+{% if comp %}
+<p style="color:green;"> You are doing great! ✅</p>
+{% else %}
+<p style="color:red;">Keep working harder!</p>
+{% endif %}
+{% endblock content %}

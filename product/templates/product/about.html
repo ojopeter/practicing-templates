@@ -1,0 +1,18 @@
+{% extends "product/base.html" %}
+{% block title %}
+    About Page
+{% endblock title %}
+{% block content %}
+    {% for list in lists %}
+        {% if list == 'laptops' %}
+            <p>Say high</p>
+            <p>{{list|upper}}</p>
+        {% else %} 
+            <p>{{list|lower}}</p>
+        {% endif %}
+        
+    {% endfor %}
+    <div class="btn-container">
+        <a href="{% url 'product_home'%}" class="btn-home">Home</a>
+    </div>
+{% endblock content %}
